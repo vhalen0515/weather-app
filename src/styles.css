@@ -1,0 +1,181 @@
+/*--------------------------------------------- CSS Reset --------------------------------------------------------*/
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    padding: 0;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+/* 9. Create a root stacking context */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/*--------------------------------------------- Variables / Utilities ----------------------------------------------------------*/
+:root {
+    /* Colors */
+    --card-bg: #212939;
+    --accent-clr: #5a7fe7;
+
+    /* Fonts */
+    --primary-txt: #f2f5f8;
+    --secondary-txt: #b4b8bf;
+}
+
+/*------------------------------------------------------ Typography -------------------------------------------------------------*/
+@font-face {
+    font-family: "Poppins";
+    src: url("./assets/fonts/poppins-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./assets/fonts/poppins-bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+h2 {
+    font-size: 1.125rem;
+}
+
+h2, p {
+    color: var(--primary-txt);
+}
+
+/*------------------------------------------------------------- Home ---------------------------------------------------------*/
+
+html {
+    background: hsl(207, 77%, 20%);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+main {
+    background-image: url("./assets/map.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    padding: 1rem;
+}
+
+.dashboard {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    min-height: 100vh;
+}
+
+main.dashboard {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.dashboard-container {
+    max-width: 600px;
+    /* margin: 0 auto; */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-content-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/*--------------------------------------------------- Media Queries --------------------------------------------------------*/
+/* 1110 */
+@media (width >= 1110px) {
+    .dashboard-container {
+        max-width: 1110px;
+    }
+
+    .dashboard-content-info {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            "top-left top-right"
+            "bottom-left bottom-right";
+        gap: 2rem;
+    }
+
+    .current {
+        grid-area: top-left;
+    }
+    .hourly {
+        grid-area: top-right;
+    }
+    .other {
+        grid-area: bottom-left;
+    }
+    .daily {
+        grid-area: bottom-right;
+    }
+}

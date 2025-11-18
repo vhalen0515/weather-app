@@ -1,0 +1,51 @@
+.hourly {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.hourly img {
+    width: 30px;
+    height: 30px;
+}
+
+.hourly__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 0.75rem 0.75rem;
+}
+
+.hourly__time {
+    border-bottom: solid 1px black;
+}
+
+.hourly__time p {
+    font-size: 0.85rem;
+    padding-bottom: 0.25rem;
+}
+
+.hourly__condition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.hourly__condition-desc {
+    font-size: 0.75rem;
+}
+
+.hourly__temp {
+    /* font-size: 1.25rem; */
+    font-weight: 700;
+}
+
+@media (width >= 1110px) {
+    .hourly {
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,23 @@
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+}
+
+.searchbar input {
+    font-size: 0.875rem;
+    color: var(--primary-txt);
+    background-image: url("../assets/magnifying-glass.svg");
+    background-position: 1rem center;
+    background-size: 1rem 1rem;
+    background-color: var(--card-bg);
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    border: none;
+    padding: 0.5rem 1rem 0.5rem 3rem;
+}
+
+.searchbar input:focus {
+    outline: 2px solid var(--secondary-txt);
+}
