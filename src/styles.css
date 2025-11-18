@@ -116,7 +116,7 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100svh;
     width: 100%;
     padding: 1rem;
 }
