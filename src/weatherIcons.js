@@ -171,27 +171,17 @@ export const weatherIcons = [
 
     // 🌫️ ATMOSPHERE (fog, haze, dust, etc.)
     {
-        name: "Atmosphere",
+        name: "Mist",
         descriptions: ["mist", "smoke", "haze", "fog"],
         icon: fogIcon,
     },
     {
-        name: "Atmosphere",
-        descriptions: ["sand", "dust", "sand/dust whirls"],
+        name: "Sand",
+        descriptions: ["sand", "dust", "sand/dust whirls, volcanic ash"],
         icon: dustIcon,
     },
     {
-        name: "Atmosphere",
-        descriptions: ["volcanic ash"],
-        icon: dustIcon,
-    },
-    {
-        name: "Atmosphere",
-        descriptions: ["squalls"],
-        icon: windyIcon,
-    },
-    {
-        name: "Atmosphere",
+        name: "Torando",
         descriptions: ["tornado"],
         icon: tornadoIcon,
     },
